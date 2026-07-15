@@ -1,0 +1,21 @@
+from-llm-to-agentic-workflow.md
+  s_509d9bcaaa46c6::t_affc1b389ef3ca 1-274
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "eec15004edc22ab4db822917fb38eb5493b34a02",
+  "prompts": {},
+  "sessions": {
+    "s_509d9bcaaa46c6": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f64b6-7ce3-7b73-a8c6-6cf75e6f1b80",
+        "model": "unknown"
+      },
+      "human_author": "wuyanru <wuyanru@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
