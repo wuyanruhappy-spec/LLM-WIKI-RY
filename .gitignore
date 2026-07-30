@@ -1,5 +1,6 @@
 # IDE metadata
 /.idea/
+/.obsidian/
 
 # Generated publishing payloads, previews, and remote readbacks
 /.artifacts/

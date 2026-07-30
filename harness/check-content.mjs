@@ -10,6 +10,7 @@ const ignoredDirectories = new Set([
   ".artifacts",
   ".git",
   ".idea",
+  ".obsidian",
   "node_modules",
 ]);
 const allowedRootDirectories = new Set([
