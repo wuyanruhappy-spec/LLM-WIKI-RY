@@ -1,0 +1,29 @@
+CONTEXT.md
+  s_751d2d8aa8d204::t_8553ef569ee839 28,30-33
+README.md
+  s_751d2d8aa8d204::t_7a39b4b86e76e0 24,40,52-54,61-63,66,76
+content/agentic-workflows/from-llm-to-agentic-workflow.md
+  s_751d2d8aa8d204::t_49dd3d7b4a3740 29,33,92,137
+harness/README.md
+  s_751d2d8aa8d204::t_0fb299ae48f578 8-10,29
+harness/check-content.mjs
+  s_751d2d8aa8d204::t_9e0caae7f09712 67-79,82-91,93-94,154,157,160-177,179-182
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "35d6b6650a231107c50fd9615b4488ef822242d5",
+  "prompts": {},
+  "sessions": {
+    "s_751d2d8aa8d204": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019fb20b-ca9d-75d2-8e81-edd2496e665f",
+        "model": "unknown"
+      },
+      "human_author": "wuyanru <wuyanru@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
