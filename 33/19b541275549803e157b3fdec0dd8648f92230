@@ -1,0 +1,23 @@
+.gitignore
+  s_751d2d8aa8d204::t_9bf905ffc23294 3
+harness/check-content.mjs
+  s_751d2d8aa8d204::t_8bd5e2f1e56ea4 13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "3319b541275549803e157b3fdec0dd8648f92230",
+  "prompts": {},
+  "sessions": {
+    "s_751d2d8aa8d204": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019fb20b-ca9d-75d2-8e81-edd2496e665f",
+        "model": "unknown"
+      },
+      "human_author": "wuyanru <wuyanru@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
