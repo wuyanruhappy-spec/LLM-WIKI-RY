@@ -1,0 +1,27 @@
+README.md
+  s_751d2d8aa8d204::t_c0de05c178d255 9-13,53
+content/智能体工作流/从氛围编程到智能体工程.md
+  s_751d2d8aa8d204::t_73d82c13045f20 1-154
+harness/README.md
+  s_751d2d8aa8d204::t_2ade6ea92bee5d 8
+harness/check-content.mjs
+  s_751d2d8aa8d204::t_345cd6774acb61 103-114,167
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "7ea25725e92d3b2c6f438d5b5b828cd81d410363",
+  "prompts": {},
+  "sessions": {
+    "s_751d2d8aa8d204": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019fb20b-ca9d-75d2-8e81-edd2496e665f",
+        "model": "unknown"
+      },
+      "human_author": "wuyanru <wuyanru@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
