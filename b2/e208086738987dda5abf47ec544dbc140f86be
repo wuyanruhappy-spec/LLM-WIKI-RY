@@ -1,0 +1,23 @@
+README.md
+  s_751d2d8aa8d204::t_39b8fe31b48450 12
+content/agentic-workflows/dynamic-workflow-harness-protocol-glue.md
+  s_751d2d8aa8d204::t_f97e2e3660b6d3 1-290
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "b2e208086738987dda5abf47ec544dbc140f86be",
+  "prompts": {},
+  "sessions": {
+    "s_751d2d8aa8d204": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019fb20b-ca9d-75d2-8e81-edd2496e665f",
+        "model": "unknown"
+      },
+      "human_author": "wuyanru <wuyanru@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
