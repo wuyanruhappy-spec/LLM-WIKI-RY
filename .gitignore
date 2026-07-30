@@ -1,0 +1,11 @@
+# IDE metadata
+/.idea/
+
+# Local Feishu/Lark document fragments
+/*.xml
+
+# Generated diagram render and remote readback artifacts
+/diagrams/
+
+# macOS metadata
+.DS_Store

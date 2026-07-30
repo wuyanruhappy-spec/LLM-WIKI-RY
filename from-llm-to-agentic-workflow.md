@@ -238,37 +238,3 @@ Memory 可分为 Working Memory 和 Archival Memory。前者高频、需要快�
 | **3｜RAG** | Embedding、Chunking、Retrieval、引用 | 答案可更新、可验证、可追溯 | 把长 Context 当成可靠检索 |
 | **4｜Agentic Workflow** | Task Decomposition、Tools、Memory、Evals | 系统能在护栏内完成真实任务 | 把自由度当作智能，把风险留给用户 |
 | **5｜Multi-Agent** | 并行、编排、复用、Agent-as-Tool | 新增复杂度能换来明确收益 | 单 Agent 能做却强行堆 Agent |
-
-> 🚀 **下一步：**从生活或工作中的真实痛点开始，先定义问题，再反推需要的技术。学习路线应由任务推动，而不是由热门名词推动。
-
-视频作者还提供四组 Prompts，帮助拆解 Workflow、检查 Over-Engineering、建立 Eval 系统，以及判断是否应该采用 Multi-Agent。
-
-## 附录｜时间索引与术语
-
-### 完整时间索引
-
-| 时间 | 主题 | 内容范围 |
-| --- | --- | --- |
-| 00:00–00:58 | 开场 | AI Builder 的价值、学习困境与课程地图 |
-| 00:58–03:32 | Base Model 限制 | 横轴/纵轴、领域知识、时效、控制、长上下文 |
-| 03:32–06:47 | Prompt Engineering | BCG 实验、Centaur/Cyborg、Prompt Chaining |
-| 06:47–08:02 | Fine-Tuning | 四类成本与少数适用情境 |
-| 08:02–10:50 | RAG | Embedding、Vector DB、Chunking、长 Context 争议 |
-| 10:50–13:48 | Agentic Workflow | 定义、RAG 与 Agent、传统软件对比 |
-| 13:48–17:46 | Agent 设计 | Fuzzy、护栏、Context、Tools、自主性、MCP |
-| 17:46–20:46 | Evaluation | 三维框架、LLM-as-Judge、A/B Test |
-| 20:46–23:34 | 客服案例 | 人类 SOP、Task Decomposition、工具选择、Evals |
-| 23:34–25:39 | Multi-Agent | 并行、复用、智慧家庭、Agent-as-Tool |
-| 25:39–27:24 | 总结 | 五层技术地图与学习路线 |
-
-### 关键术语
-
-| 术语 | 含义 |
-| --- | --- |
-| Augmenting LLM | 通过工程技术增强现有基础模型的纵轴路线 |
-| The Jagged Frontier | AI 在不同任务上的能力边界参差不齐 |
-| Prompt Chaining | 把复杂任务拆成多个 Prompt，并串接中间结果 |
-| RAG | 先检索外部资料，再基于资料生成回答 |
-| Fuzzy Engineering | 面向概率性、上下文敏感输出的工程方法 |
-| LLM-as-Judge | 用另一个 LLM 按比较、打分或 Rubric 评估输出 |
-| MCP | Model Context Protocol，为 Agent 与工具/Agent 提供统一连接 |
