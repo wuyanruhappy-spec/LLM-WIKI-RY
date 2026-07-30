@@ -1,3 +1,13 @@
+---
+title: Sophon Trace → 评估 → Badcase → 数据集回流
+type: research-note
+status: reference
+topics:
+  - trace
+  - evaluation
+  - badcase
+---
+
 # Sophon Trace → 评估 → Badcase → 数据集回流：官方资料核查
 
 > 核查时间：2026-07-28<br>

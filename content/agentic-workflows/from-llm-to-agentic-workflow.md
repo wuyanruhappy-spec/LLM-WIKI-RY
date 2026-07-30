@@ -1,3 +1,12 @@
+---
+title: 从 LLM 到 Agentic Workflow
+type: article
+status: published
+topics:
+  - llm
+  - agentic-workflow
+---
+
 # 从 LLM 到 Agentic Workflow
 
 > 来源：[飞书原文](https://bytedance.sg.larkoffice.com/docx/N3emdqhVNohtYZx2yBolJqhsgse)
@@ -7,7 +16,7 @@
 
 ## 一图读懂：从基础模型到 Multi-Agent
 
-![从基础模型到 Multi-Agent](assets/from-llm-to-agentic-workflow/overview.jpg)
+![从基础模型到 Multi-Agent](../../assets/from-llm-to-agentic-workflow/overview.jpg)
 
 ### 技术选择总览
 
@@ -82,7 +91,7 @@ Fine-Tuning 仍适用于法律、科学等需要重复高精度输出的领域�
 
 ### RAG：从问题到可追溯答案的完整链路
 
-![RAG 完整链路](assets/from-llm-to-agentic-workflow/rag-workflow.jpg)
+![RAG 完整链路](../../assets/from-llm-to-agentic-workflow/rag-workflow.jpg)
 
 #### RAG 的核心步骤
 
@@ -100,7 +109,7 @@ Fine-Tuning 仍适用于法律、科学等需要重复高精度输出的领域�
 
 ### Agentic Workflow 系统架构
 
-![Agentic Workflow 系统架构](assets/from-llm-to-agentic-workflow/agentic-workflow-architecture.jpg)
+![Agentic Workflow 系统架构](../../assets/from-llm-to-agentic-workflow/agentic-workflow-architecture.jpg)
 
 “AI Agent”已经被泛化：一个长 Prompt 可以叫 Agent，复杂 Multi-Agent 系统也叫 Agent。吴恩达使用 Agentic Workflow 来精确描述：把提示词、外部工具、上下文、记忆和多步决策组合进结构化工作流程。
 
@@ -147,7 +156,7 @@ Memory 可分为 Working Memory 和 Archival Memory。前者高频、需要快�
 
 ### Eval 三维框架
 
-![Eval 三维框架](assets/from-llm-to-agentic-workflow/evaluation-framework.jpg)
+![Eval 三维框架](../../assets/from-llm-to-agentic-workflow/evaluation-framework.jpg)
 
 | 维度 | 一端 | 另一端 | 为什么两端都要 |
 | --- | --- | --- | --- |
@@ -177,7 +186,7 @@ Memory 可分为 Working Memory 和 Archival Memory。前者高频、需要快�
 
 ### 客服改地址工作流
 
-![客服改地址工作流](assets/from-llm-to-agentic-workflow/customer-service-workflow.jpg)
+![客服改地址工作流](../../assets/from-llm-to-agentic-workflow/customer-service-workflow.jpg)
 
 > 🔍 **正确起点：**先坐到客服旁边观察一到两天，理解人类真实工作流，再做 Task Decomposition。不是先写一个看起来很聪明的 Prompt。
 
@@ -205,7 +214,7 @@ Memory 可分为 Working Memory 和 Archival Memory。前者高频、需要快�
 
 ### Multi-Agent 智慧家庭架构
 
-![Multi-Agent 智慧家庭架构](assets/from-llm-to-agentic-workflow/multi-agent-smart-home.jpg)
+![Multi-Agent 智慧家庭架构](../../assets/from-llm-to-agentic-workflow/multi-agent-smart-home.jpg)
 
 ### 引入理由与反对理由
 

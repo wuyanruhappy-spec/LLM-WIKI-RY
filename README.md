@@ -1,41 +1,86 @@
 # LLM-WIKI-RY
 
-这是 RY 的 LLM Wiki 学习与实践项目，用于系统整理知识库、RAG、语义层、Agent、评测和自进化闭环相关知识。
+RY 的混合型个人知识库：用正式文章沉淀可长期阅读的知识，用研究笔记保留结论背后的证据与边界，并通过内容 Harness 阻止发布产物重新污染仓库。
 
-## 学习文档
+## 内容导航
 
-### 01｜基础概念
+### 正式内容
 
-- [LLM Wiki 入门与建设思考](docs/01-基础概念/LLM-Wiki-入门与建设思考.md)
+- [LLM Wiki 入门与建设思考](content/foundations/llm-wiki-introduction.md)
+- [业务知识的完整生命周期](content/knowledge-modeling/knowledge-lifecycle.md)
+- [从 LLM 到 Agentic Workflow](content/agentic-workflows/from-llm-to-agentic-workflow.md)
 
-### 02｜知识建模
+### 研究笔记
 
-- [第二课：业务知识的完整生命周期](docs/02-知识建模/02-业务知识的完整生命周期.md)
+- [LLMWiki Trace 技术方案：Sophon 线上主链路与本地评测](research/trace/llmwiki-trace-sophon-solution.md)
+- [Sophon Trace → 评估 → Badcase → 数据集回流](research/trace/sophon-eval-badcase-feedback-loop.md)
 
-### 相关材料
+## 目录职责
 
-- [从 LLM 到 Agentic Workflow](from-llm-to-agentic-workflow.md)
+| 目录 | 放什么 | 不放什么 |
+| --- | --- | --- |
+| `content/` | 可独立阅读、长期维护或发布的 Markdown 文章 | 调研过程、平台载荷、预览图 |
+| `research/` | 一手证据、分析过程和有边界的研究结论 | 未整理的碎片、可再生发布产物 |
+| `drafts/` | 尚未进入正式导航的草稿，首次需要时再创建 | 已发布文章 |
+| `assets/` | 被正式内容或研究笔记引用的长期媒体资产 | 远端预览、回读截图、生成缓存 |
+| `docs/adr/` | 难以逆转且需要解释原因的仓库决策 | 日常计划和过程日志 |
+| `harness/` | 内容检查和格式转换工具 | 知识正文 |
+| `.artifacts/` | 飞书 XML、渲染结果、远端预览和回读记录 | 权威内容；该目录不进入 Git |
 
-## 建议学习顺序
+根目录只保留入口和仓库级约束：
 
-1. 阅读《LLM Wiki 入门与建设思考》，理解知识库、RAG、语义层、元数据和评测闭环。
-2. 阅读《第二课：业务知识的完整生命周期》，理解一条知识如何从原始证据进入 Wiki，再被模型消费和持续修复。
-3. 阅读《从 LLM 到 Agentic Workflow》，理解 Prompt、RAG、Tool、Agent 和 Eval 如何组成完整系统。
-4. 后续结合真实业务问题，继续补充检索、评测、Badcase 归因和知识库自进化实践。
+- `README.md`：阅读入口与目录说明。
+- `CONTEXT.md`：项目领域术语。
+- `.gitignore`：本地产物边界。
+- `package.json`：Harness 命令入口。
 
-## 目录规划
+## 内容生命周期
 
 ```text
-LLM-WIKI-RY/
-├── README.md
-├── from-llm-to-agentic-workflow.md
-├── assets/
-└── docs/
-    ├── 01-基础概念/
-    ├── 02-知识建模/
-    ├── 03-检索与消费/
-    ├── 04-评测与归因/
-    └── 05-实践案例/
+资料与问题
+→ research/ 形成证据化研究笔记
+→ drafts/ 形成可发布草稿
+→ content/ 沉淀正式内容
+→ Harness 检查结构、元数据、链接和资产
+→ 发布平台生成物进入 .artifacts/
 ```
 
-当前只创建已经有内容的目录。其他目录将在相应课程产生后按需建立，避免出现空目录。
+不是每篇研究笔记都必须变成正式文章；不是每个发布产物都值得进入版本库。
+
+## 内容约定
+
+正式文章必须：
+
+- 使用 Markdown；
+- 位于 `content/`；
+- 包含 `title`、`type: article`、`status: published`；
+- 只有一个一级标题；
+- 所有本地链接和媒体引用真实存在。
+
+研究笔记必须：
+
+- 使用 Markdown；
+- 位于 `research/`；
+- 包含 `title`、`type: research-note`、`status: reference`；
+- 明确证据范围与结论边界；
+- 只有一个一级标题。
+
+草稿统一使用 `status: draft`，不进入本 README 的正式导航。
+
+## Harness
+
+运行完整检查：
+
+```bash
+npm run check
+```
+
+将飞书 XML 转换成便于人工复核的 Markdown：
+
+```bash
+npm run convert:lark -- .artifacts/lark/input.xml drafts/output.md
+```
+
+转换只解决格式问题，不会自动把发布产物升级为正式内容；转换结果仍需人工审阅并放入正确目录。
+
+详细规则见 [Harness 说明](harness/README.md)。仓库定位与术语见 [CONTEXT](CONTEXT.md)，关键边界决策见 [ADR-0001](docs/adr/0001-hybrid-personal-knowledge-base.md)。

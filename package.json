@@ -1,0 +1,9 @@
+{
+  "name": "llm-wiki-ry",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node harness/check-content.mjs",
+    "convert:lark": "node harness/convert-lark-xml.mjs"
+  }
+}

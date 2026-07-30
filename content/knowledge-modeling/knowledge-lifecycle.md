@@ -1,3 +1,12 @@
+---
+title: 业务知识的完整生命周期
+type: article
+status: published
+topics:
+  - llm-wiki
+  - knowledge-modeling
+---
+
 # 第二课：业务知识的完整生命周期
 
 > 第一课回答“LLM Wiki 是什么”。第二课继续回答一个更实际的问题：一条业务知识怎样从原始文档进入 Wiki，最后被大模型用于回答问题，并在出错后得到修复？
