@@ -1,0 +1,25 @@
+research/llmwiki_trace_sophon_solution.xml
+  s_d1c9a896370d61::t_4a485ed00d647a 1-248
+research/sophon_trace_architecture.svg
+  s_d1c9a896370d61::t_ed7f68065efe9f 1-105
+research/sophon_trace_architecture_block.xml
+  s_d1c9a896370d61::t_3491c8dc73cba1 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "89e77f4aa541ef8032b8cf19d130b499b5a9c254",
+  "prompts": {},
+  "sessions": {
+    "s_d1c9a896370d61": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019fa1a1-f069-75d0-8928-aa0d8c9befbf",
+        "model": "unknown"
+      },
+      "human_author": "wuyanru <wuyanru@bytedance.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
