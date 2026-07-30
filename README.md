@@ -6,10 +6,11 @@ RY 的混合型个人知识库：用正式文章沉淀可长期阅读的知识�
 
 ### 正式内容
 
-- [LLM Wiki 入门与建设思考](content/foundations/llm-wiki-introduction.md)
-- [业务知识的完整生命周期](content/knowledge-modeling/knowledge-lifecycle.md)
-- [从 LLM 到 Agentic Workflow](content/agentic-workflows/from-llm-to-agentic-workflow.md)
-- [Dynamic Workflow、Harness 与 Protocol Glue](content/agentic-workflows/dynamic-workflow-harness-protocol-glue.md)
+- [LLM Wiki 入门与建设思考](content/基础知识/大语言模型知识库入门.md)
+- [业务知识的完整生命周期](content/知识建模/业务知识生命周期.md)
+- [从 LLM 到 Agentic Workflow](content/智能体工作流/从大语言模型到智能体工作流.md)
+- [从 Vibe Coding 到 Agentic Engineering](content/智能体工作流/从氛围编程到智能体工程.md)
+- [Dynamic Workflow、Harness 与 Protocol Glue](content/智能体工作流/动态工作流运行框架与协议粘合层.md)
 
 ## 目录职责
 
@@ -49,6 +50,7 @@ RY 的混合型个人知识库：用正式文章沉淀可长期阅读的知识�
 
 - 使用 Markdown；
 - 位于 `content/`；
+- `content/` 下的文件夹和 Markdown 文件名只使用中文；
 - 直接从唯一的一级标题开始；
 - 不包含 YAML Front Matter、导入来源、修订版本或转换日期；
 - 不包含外部协作平台链接、公司内部标识或受限媒介关键词；

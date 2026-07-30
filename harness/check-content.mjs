@@ -100,6 +100,18 @@ function validateDocument(filePath) {
   }
 }
 
+function validateChineseContentPath(filePath) {
+  const segments = relative(filePath).slice("content/".length).split("/");
+  const finalIndex = segments.length - 1;
+  segments[finalIndex] = path.basename(segments[finalIndex], ".md");
+  for (const segment of segments) {
+    if (!/^\p{Script=Han}+$/u.test(segment)) {
+      errors.push(`${relative(filePath)}: content/ 下的路径名称必须全部使用中文`);
+      return;
+    }
+  }
+}
+
 function markdownTargets(filePath, body) {
   const targets = [];
   const pattern = /!?\[[^\]]*]\(([^)]+)\)/g;
@@ -152,6 +164,7 @@ const draftFiles = files.filter((filePath) =>
 );
 
 for (const filePath of contentFiles) {
+  validateChineseContentPath(filePath);
   validateDocument(filePath);
 }
 for (const filePath of researchFiles) {
