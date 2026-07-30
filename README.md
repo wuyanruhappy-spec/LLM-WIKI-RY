@@ -9,6 +9,7 @@ RY 的混合型个人知识库：用正式文章沉淀可长期阅读的知识�
 - [LLM Wiki 入门与建设思考](content/foundations/llm-wiki-introduction.md)
 - [业务知识的完整生命周期](content/knowledge-modeling/knowledge-lifecycle.md)
 - [从 LLM 到 Agentic Workflow](content/agentic-workflows/from-llm-to-agentic-workflow.md)
+- [Dynamic Workflow、Harness 与 Protocol Glue](content/agentic-workflows/dynamic-workflow-harness-protocol-glue.md)
 
 ## 目录职责
 
