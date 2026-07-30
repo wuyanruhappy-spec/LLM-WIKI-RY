@@ -5,8 +5,9 @@ Harness 负责验证仓库边界，不负责判断文章观点是否正确。
 ## 检查范围
 
 - 顶层目录和根文件白名单；
-- `content/`、`research/`、`drafts/` 的 Front Matter；
-- 每篇内容的一级标题数量；
+- `content/`、`research/`、`drafts/` 直接从唯一一级标题开始；
+- 禁止 YAML Front Matter、导入来源、修订版本和转换日期；
+- 禁止外部协作平台链接、公司内部标识和受限媒介关键词；
 - Markdown 本地链接和媒体引用；
 - 未被内容引用的长期媒体资产；
 - Git 中误入的 XML 或发布产物。
@@ -25,7 +26,7 @@ CONTENT_HARNESS=PASS
 
 失败时会列出所有问题并返回非零退出码。
 
-## 飞书 XML 转换
+## 外部平台 XML 转换
 
 ```bash
 npm run convert:lark -- <输入.xml> <输出.md>

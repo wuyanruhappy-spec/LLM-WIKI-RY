@@ -1,18 +1,4 @@
----
-title: Dynamic Workflow、Harness 与 Protocol Glue：把 Agent 从“会做事”变成“可运行系统”
-type: article
-status: published
-topics:
-  - agentic-workflow
-  - harness
-  - agent-protocol
-source: https://bytedance.sg.larkoffice.com/docx/IkHddO3XcoegNIxwmIElHBhJgwb
-source_revision: 15
----
-
 # Dynamic Workflow、Harness 与 Protocol Glue：把 Agent 从“会做事”变成“可运行系统”
-
-> 来源：[飞书原文](https://bytedance.sg.larkoffice.com/docx/IkHddO3XcoegNIxwmIElHBhJgwb) · revision 15 · 转换日期 2026-07-30
 
 上一篇《从 Vibe Coding 到 Agentic Engineering》讲到：**Agent = Model + Harness**。这篇继续向下拆一层，回答三个最容易混在一起的问题：Agent 为什么能临场改变步骤？是谁让它安全、连续、可观察地运行？不同工具、Agent 和客户端又如何互相理解？
 

@@ -51,28 +51,6 @@ function walk(directory) {
   return files;
 }
 
-function parseFrontMatter(filePath, body) {
-  if (!body.startsWith("---\n")) {
-    errors.push(`${relative(filePath)}: 缺少 Front Matter`);
-    return {};
-  }
-
-  const end = body.indexOf("\n---\n", 4);
-  if (end === -1) {
-    errors.push(`${relative(filePath)}: Front Matter 未闭合`);
-    return {};
-  }
-
-  const fields = {};
-  for (const line of body.slice(4, end).split("\n")) {
-    const match = line.match(/^([a-z][a-z0-9_-]*):\s*(.*)$/i);
-    if (match) {
-      fields[match[1]] = match[2].trim();
-    }
-  }
-  return fields;
-}
-
 function countLevelOneHeadings(body) {
   let inFence = false;
   let count = 0;
@@ -86,23 +64,34 @@ function countLevelOneHeadings(body) {
   return count;
 }
 
-function validateDocument(filePath, expected) {
-  const body = fs.readFileSync(filePath, "utf8");
-  const fields = parseFrontMatter(filePath, body);
-  for (const field of ["title", "type", "status"]) {
-    if (!fields[field]) {
-      errors.push(`${relative(filePath)}: Front Matter 缺少 ${field}`);
+function hasImportMetadata(body) {
+  let inFence = false;
+  for (const line of body.split("\n")) {
+    if (/^\s*```/.test(line)) {
+      inFence = !inFence;
+      continue;
+    }
+    if (
+      !inFence &&
+      (/^>\s*(?:来源|转换日期)[：:]/.test(line) ||
+        /^(?:source|source_revision|revision)[：:]/i.test(line))
+    ) {
+      return true;
     }
   }
-  if (fields.type && fields.type !== expected.type) {
-    errors.push(
-      `${relative(filePath)}: type 应为 ${expected.type}，实际为 ${fields.type}`
-    );
+  return false;
+}
+
+function validateDocument(filePath) {
+  const body = fs.readFileSync(filePath, "utf8");
+  if (body.startsWith("---\n")) {
+    errors.push(`${relative(filePath)}: 禁止 YAML Front Matter`);
   }
-  if (fields.status && fields.status !== expected.status) {
-    errors.push(
-      `${relative(filePath)}: status 应为 ${expected.status}，实际为 ${fields.status}`
-    );
+  if (!body.startsWith("# ")) {
+    errors.push(`${relative(filePath)}: 必须直接从一级标题开始`);
+  }
+  if (hasImportMetadata(body)) {
+    errors.push(`${relative(filePath)}: 禁止导入来源、修订版本或转换日期`);
   }
   const headingCount = countLevelOneHeadings(body);
   if (headingCount !== 1) {
@@ -162,19 +151,35 @@ const draftFiles = files.filter((filePath) =>
 );
 
 for (const filePath of contentFiles) {
-  validateDocument(filePath, { type: "article", status: "published" });
+  validateDocument(filePath);
 }
 for (const filePath of researchFiles) {
-  validateDocument(filePath, { type: "research-note", status: "reference" });
+  validateDocument(filePath);
 }
 for (const filePath of draftFiles) {
+  validateDocument(filePath);
+}
+
+const forbiddenPublicationPatterns = [
+  {
+    label: "外部协作平台链接",
+    pattern: /https?:\/\/[^\s)>]*(?:larkoffice\.com|larksuite\.com|feishu\.cn)/i,
+  },
+  {
+    label: "公司内部标识",
+    pattern: /(?:\b(?:bytedance|byteintl)\b|byted\.org|字节跳动|字节内部)/i,
+  },
+  {
+    label: "受限媒介关键词",
+    pattern: /(?:视频|\bvideo\b|\byoutube\b|youtu\.be)/i,
+  },
+];
+for (const filePath of markdownFiles) {
   const body = fs.readFileSync(filePath, "utf8");
-  const fields = parseFrontMatter(filePath, body);
-  if (fields.status && fields.status !== "draft") {
-    errors.push(`${relative(filePath)}: drafts/ 中的 status 必须为 draft`);
-  }
-  if (countLevelOneHeadings(body) !== 1) {
-    errors.push(`${relative(filePath)}: 草稿必须有且只有一个一级标题`);
+  for (const { label, pattern } of forbiddenPublicationPatterns) {
+    if (pattern.test(body)) {
+      errors.push(`${relative(filePath)}: 禁止包含${label}`);
+    }
   }
 }
 

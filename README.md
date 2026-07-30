@@ -21,7 +21,7 @@ RY 的混合型个人知识库：用正式文章沉淀可长期阅读的知识�
 | `assets/` | 被正式内容或研究笔记引用的长期媒体资产 | 远端预览、回读截图、生成缓存 |
 | `docs/adr/` | 难以逆转且需要解释原因的仓库决策 | 日常计划和过程日志 |
 | `harness/` | 内容检查和格式转换工具 | 知识正文 |
-| `.artifacts/` | 飞书 XML、渲染结果、远端预览和回读记录 | 权威内容；该目录不进入 Git |
+| `.artifacts/` | 外部平台导出文件、渲染结果、远端预览和回读记录 | 权威内容；该目录不进入 Git |
 
 根目录只保留入口和仓库级约束：
 
@@ -37,7 +37,7 @@ RY 的混合型个人知识库：用正式文章沉淀可长期阅读的知识�
 → research/ 形成证据化研究笔记
 → drafts/ 形成可发布草稿
 → content/ 沉淀正式内容
-→ Harness 检查结构、元数据、链接和资产
+→ Harness 检查结构、发布安全、链接和资产
 → 发布平台生成物进入 .artifacts/
 ```
 
@@ -49,19 +49,21 @@ RY 的混合型个人知识库：用正式文章沉淀可长期阅读的知识�
 
 - 使用 Markdown；
 - 位于 `content/`；
-- 包含 `title`、`type: article`、`status: published`；
-- 只有一个一级标题；
+- 直接从唯一的一级标题开始；
+- 不包含 YAML Front Matter、导入来源、修订版本或转换日期；
+- 不包含外部协作平台链接、公司内部标识或受限媒介关键词；
 - 所有本地链接和媒体引用真实存在。
 
 研究笔记必须：
 
 - 使用 Markdown；
 - 位于 `research/`；
-- 包含 `title`、`type: research-note`、`status: reference`；
+- 直接从唯一的一级标题开始；
+- 不包含 YAML Front Matter、导入来源、修订版本或转换日期；
+- 不包含外部协作平台链接、公司内部标识或受限媒介关键词；
 - 明确证据范围与结论边界；
-- 只有一个一级标题。
 
-草稿统一使用 `status: draft`，不进入本 README 的正式导航。
+草稿统一放入 `drafts/`，遵守同样的结构与发布安全规则，不进入本 README 的正式导航。
 
 ## Harness
 
@@ -71,7 +73,7 @@ RY 的混合型个人知识库：用正式文章沉淀可长期阅读的知识�
 npm run check
 ```
 
-将飞书 XML 转换成便于人工复核的 Markdown：
+将外部平台 XML 转换成便于人工复核的 Markdown：
 
 ```bash
 npm run convert:lark -- .artifacts/lark/input.xml drafts/output.md

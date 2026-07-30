@@ -1,12 +1,3 @@
----
-title: LLM Wiki 入门与建设思考
-type: article
-status: published
-topics:
-  - llm-wiki
-  - knowledge-base
----
-
 # LLM Wiki 入门与建设思考
 
 > 面向第一次接触 LLM 知识库的读者。目标是用尽量简单的语言，讲清楚 LLM Wiki 是什么、为什么需要它、内部有哪些组成部分，以及怎样把一个静态知识库逐步建设成可持续改进的业务知识系统。

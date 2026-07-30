@@ -1,16 +1,4 @@
----
-title: 从 LLM 到 Agentic Workflow
-type: article
-status: published
-topics:
-  - llm
-  - agentic-workflow
----
-
 # 从 LLM 到 Agentic Workflow
-
-> 来源：[飞书原文](https://bytedance.sg.larkoffice.com/docx/N3emdqhVNohtYZx2yBolJqhsgse)
-> 转换日期：2026-07-15
 
 > 💡 **核心结论：**真正的 AI Builder 不是不断追逐更强模型，而是知道何时使用 Prompt、RAG、Tool、Agent、Eval 和 Multi-Agent，并把确定性软件与模糊智能组合成可控系统。
 
@@ -38,11 +26,11 @@ topics:
 
 #### 纵轴：Augmenting LLM
 
-在现有模型之上叠加 Prompt、RAG、Tools、Agent、Eval 等工程技术。Beyond LLM 课程和本视频主要讨论这条路线。
+在现有模型之上叠加 Prompt、RAG、Tools、Agent、Eval 等工程技术。Beyond LLM 课程和本文主要讨论这条路线。
 
 ### 基础模型的四类限制
 
-| 限制 | 具体表现 | 视频案例 | 工程启示 |
+| 限制 | 具体表现 | 示例 | 工程启示 |
 | --- | --- | --- | --- |
 | **缺乏领域知识** | 不知道企业内部文件、产品规格和专有数据 | 自动化农业设备需要识别作物病害，但市场上没有对应数据集 | 需要 RAG、领域数据或少数情况下的 Fine-Tuning |
 | **信息会落后** | 无法持续认识新词、新事件、新公司和网络用语 | 模型不可能每隔几个月重训一次 | 知识更新应与模型训练解耦 |
@@ -101,7 +89,7 @@ Fine-Tuning 仍适用于法律、科学等需要重复高精度输出的领域�
 4. 把检索片段、System Prompt 与 User Query 组合后交给 LLM。
 5. 要求模型只依据资料回答；没有答案就说不知道，并返回页码、章节、行号或链接供验证。
 
-视频以药物副作用为例：即使问题说“副作用”、文档写“不良反应”，语义检索仍可能正确命中。长达 50 页的文件不应整体压成一个向量，而应使用 Chunking；更进阶的方法同时保存整篇、章节和段落级向量，先定位章节，再下钻到精确段落。
+以药物副作用为例：即使问题说“副作用”、文档写“不良反应”，语义检索仍可能正确命中。长达 50 页的文件不应整体压成一个向量，而应使用 Chunking；更进阶的方法同时保存整篇、章节和段落级向量，先定位章节，再下钻到精确段落。
 
 超长 Context 不会很快淘汰 RAG。每次提问都让模型重读整个 Google Drive，会带来难以接受的延迟和成本。搜索引擎同样依赖预建索引，而不是每次查询都重新爬遍互联网。RAG 的高效检索、实时更新和来源追溯仍具有长期价值。
 
@@ -146,7 +134,7 @@ Memory 可分为 Working Memory 和 Archival Memory。前者高频、需要快�
 | **Hardcoded Tools** | Agent 决定 | 固定 | 兼顾灵活性与可控性 | 推荐作为生产起点 |
 | **Fully Autonomous** | Agent 决定 | 可自行创建 | 能力最强、风险最高 | 必须严格限制外部动作 |
 
-视频用“Agent 错订 100 张机票”提醒：自主性越高，权限、确认机制、幂等和回滚越重要。
+“Agent 错订 100 张机票”的案例提醒我们：自主性越高，权限、确认机制、幂等和回滚越重要。
 
 ### MCP：统一连接工具与 Agent
 
