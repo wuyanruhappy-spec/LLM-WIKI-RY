@@ -10,11 +10,6 @@ RY 的混合型个人知识库：用正式文章沉淀可长期阅读的知识�
 - [业务知识的完整生命周期](content/knowledge-modeling/knowledge-lifecycle.md)
 - [从 LLM 到 Agentic Workflow](content/agentic-workflows/from-llm-to-agentic-workflow.md)
 
-### 研究笔记
-
-- [LLMWiki Trace 技术方案：Sophon 线上主链路与本地评测](research/trace/llmwiki-trace-sophon-solution.md)
-- [Sophon Trace → 评估 → Badcase → 数据集回流](research/trace/sophon-eval-badcase-feedback-loop.md)
-
 ## 目录职责
 
 | 目录 | 放什么 | 不放什么 |
