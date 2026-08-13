@@ -100,15 +100,24 @@ function validateDocument(filePath) {
   }
 }
 
-function validateChineseContentPath(filePath) {
+function validateContentPath(filePath) {
   const segments = relative(filePath).slice("content/".length).split("/");
   const finalIndex = segments.length - 1;
-  segments[finalIndex] = path.basename(segments[finalIndex], ".md");
-  for (const segment of segments) {
+  const fileName = path.basename(segments[finalIndex], ".md");
+  const directories = segments.slice(0, finalIndex);
+  for (const segment of directories) {
     if (!/^\p{Script=Han}+$/u.test(segment)) {
-      errors.push(`${relative(filePath)}: content/ 下的路径名称必须全部使用中文`);
+      errors.push(`${relative(filePath)}: content/ 下的文件夹名称必须全部使用中文`);
       return;
     }
+  }
+  if (
+    !/[\p{Script=Han}]/u.test(fileName) ||
+    !/^[\p{Script=Han}\p{L}\p{N}\s：、“”‘’（）()，。！？·—+\-]+$/u.test(fileName)
+  ) {
+    errors.push(
+      `${relative(filePath)}: 文件名必须包含中文，且只能使用中英文、数字、空格和常用标题标点`
+    );
   }
 }
 
@@ -164,7 +173,7 @@ const draftFiles = files.filter((filePath) =>
 );
 
 for (const filePath of contentFiles) {
-  validateChineseContentPath(filePath);
+  validateContentPath(filePath);
   validateDocument(filePath);
 }
 for (const filePath of researchFiles) {
