@@ -11,6 +11,9 @@ RY 的混合型个人知识库：用正式文章沉淀可长期阅读的知识�
 - [从 LLM 到 Agentic Workflow](content/智能体工作流/从%20LLM%20到%20Agentic%20Workflow.md)
 - [从 Vibe Coding 到 Agentic Engineering](content/智能体工作流/从%20Vibe%20Coding%20到%20Agentic%20Engineering：把%20AI%20编程升级为可验证、可复利的软件工厂.md)
 - [Dynamic Workflow、Harness 与 Protocol Glue](content/智能体工作流/Dynamic%20Workflow、Harness%20与%20Protocol%20Glue：把%20Agent%20从“会做事”变成“可运行系统”.md)
+- [让 AI 安全进入生产环境：从 Spec、Zero Trust 到 Evaluation 的工程闭环](content/智能体工作流/让%20AI%20安全进入生产环境：从%20Spec、Zero%20Trust%20到%20Evaluation%20的工程闭环.md)
+- [从 Loop 到 Graph：把智能体组织成可控、可恢复的执行系统](content/智能体工作流/从%20Loop%20到%20Graph：把智能体组织成可控、可恢复的执行系统.md)
+- [把 AI 成本花在刀刃上：Model Routing 的任务分工、交付链与升级机制](content/智能体工作流/把%20AI%20成本花在刀刃上：Model%20Routing%20的任务分工、交付链与升级机制.md)
 
 ## 目录职责
 
