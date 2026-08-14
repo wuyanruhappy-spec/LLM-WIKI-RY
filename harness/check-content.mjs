@@ -113,7 +113,7 @@ function validateContentPath(filePath) {
   }
   if (
     !/[\p{Script=Han}]/u.test(fileName) ||
-    !/^[\p{Script=Han}\p{L}\p{N}\s：、“”‘’（）()，。！？·—+\-]+$/u.test(fileName)
+    !/^[\p{Script=Han}\p{L}\p{N}\s：、“”‘’（）()，。！？·—+\.\-]+$/u.test(fileName)
   ) {
     errors.push(
       `${relative(filePath)}: 文件名必须包含中文，且只能使用中英文、数字、空格和常用标题标点`

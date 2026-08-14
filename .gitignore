@@ -4,6 +4,8 @@
 
 # Generated publishing payloads, previews, and remote readbacks
 /.artifacts/
+/diagrams/
+/youtube-tech-blogs/
 
 # macOS metadata
 .DS_Store

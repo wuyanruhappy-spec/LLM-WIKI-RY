@@ -14,6 +14,8 @@ RY 的混合型个人知识库：用正式文章沉淀可长期阅读的知识�
 - [让 AI 安全进入生产环境：从 Spec、Zero Trust 到 Evaluation 的工程闭环](content/智能体工作流/让%20AI%20安全进入生产环境：从%20Spec、Zero%20Trust%20到%20Evaluation%20的工程闭环.md)
 - [从 Loop 到 Graph：把智能体组织成可控、可恢复的执行系统](content/智能体工作流/从%20Loop%20到%20Graph：把智能体组织成可控、可恢复的执行系统.md)
 - [把 AI 成本花在刀刃上：Model Routing 的任务分工、交付链与升级机制](content/智能体工作流/把%20AI%20成本花在刀刃上：Model%20Routing%20的任务分工、交付链与升级机制.md)
+- [从 MCP、A2A 到 Agent Skills：AI Agent 生产化的连接、协作与评估体系](content/智能体工作流/从%20MCP、A2A%20到%20Agent%20Skills：AI%20Agent%20生产化的连接、协作与评估体系.md)
+- [CLAUDE.md 工程化指南：用最小规则预算构建可持续的 AI 编程上下文](content/智能体工作流/CLAUDE.md%20工程化指南：用最小规则预算构建可持续的%20AI%20编程上下文.md)
 
 ## 目录职责
 
