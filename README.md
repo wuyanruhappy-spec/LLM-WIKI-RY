@@ -7,7 +7,10 @@ RY 的混合型个人知识库：用正式文章沉淀可长期阅读的知识�
 ### 正式内容
 
 - [LLM Wiki 入门与建设思考](content/基础知识/大语言模型知识库入门.md)
+- [LLM Wiki：把知识从一次性检索变成持续复利的系统](content/基础知识/LLM%20Wiki：把知识从一次性检索变成持续复利的系统.md)
 - [业务知识的完整生命周期](content/知识建模/业务知识生命周期.md)
+- [从收藏到复利：把 LLM Wiki 做成 Agent 的长期上下文](content/知识建模/从收藏到复利：把%20LLM%20Wiki%20做成%20Agent%20的长期上下文.md)
+- [让 Context 流动起来：从个人知识底座到团队数字分身](content/智能体工作流/让%20Context%20流动起来：从个人知识底座到团队数字分身.md)
 - [从 LLM 到 Agentic Workflow](content/智能体工作流/从%20LLM%20到%20Agentic%20Workflow.md)
 - [从 Vibe Coding 到 Agentic Engineering](content/智能体工作流/从%20Vibe%20Coding%20到%20Agentic%20Engineering：把%20AI%20编程升级为可验证、可复利的软件工厂.md)
 - [Dynamic Workflow、Harness 与 Protocol Glue](content/智能体工作流/Dynamic%20Workflow、Harness%20与%20Protocol%20Glue：把%20Agent%20从“会做事”变成“可运行系统”.md)
