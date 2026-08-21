@@ -13,6 +13,7 @@ const ignoredDirectories = new Set([
   ".obsidian",
   "node_modules",
 ]);
+const excludedRootDirectories = new Set(["diagrams", "youtube-tech-blogs"]);
 const allowedRootDirectories = new Set([
   ".github",
   "assets",
@@ -24,6 +25,7 @@ const allowedRootDirectories = new Set([
 ]);
 const allowedRootFiles = new Set([
   ".gitignore",
+  "AGENTS.md",
   "CONTEXT.md",
   "LICENSE",
   "README.md",
@@ -42,7 +44,10 @@ function walk(directory) {
     }
     const entryPath = path.join(directory, entry.name);
     if (entry.isDirectory()) {
-      if (!ignoredDirectories.has(entry.name)) {
+      if (
+        !ignoredDirectories.has(entry.name) &&
+        !(directory === root && excludedRootDirectories.has(entry.name))
+      ) {
         files.push(...walk(entryPath));
       }
     } else {
@@ -149,7 +154,11 @@ function markdownTargets(filePath, body) {
 
 const rootEntries = fs.readdirSync(root, { withFileTypes: true });
 for (const entry of rootEntries) {
-  if (entry.name === ".DS_Store" || ignoredDirectories.has(entry.name)) {
+  if (
+    entry.name === ".DS_Store" ||
+    ignoredDirectories.has(entry.name) ||
+    (entry.isDirectory() && excludedRootDirectories.has(entry.name))
+  ) {
     continue;
   }
   if (entry.isDirectory() && !allowedRootDirectories.has(entry.name)) {

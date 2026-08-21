@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "check": "node harness/check-content.mjs",
+    "check": "node harness/check-content.mjs && node harness/check-wiki.mjs",
     "convert:lark": "node harness/convert-lark-xml.mjs"
   }
 }
